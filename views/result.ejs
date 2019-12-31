@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1><%=title%></h1>
+        <h2><%=discription%></h2>
+
+        <img src="data:<%=type%>;base64,<%=image64%>" style="max-width: 1000"><br>
+
+        <label for="make">Make: </label>
+        <label id="make"><%=imageData.make%></label><br>
+
+        <label for="model">Model: </label>
+        <label id="model"><%=imageData.model%></label><br>
+
+        <label for="createdOn">Created on: </label>
+        <label id="createdOn"><%=imageData.createdOn%></label><br>
+
+        <label for="location">Location: </label>
+        <a href="map/<%=imageData.location[0]%>/<%=imageData.location[1]%>/12" id="location">Map</a><br>
+
+        <a href="/">Home</a>
+        
+    </body>
+</html>

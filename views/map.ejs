@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
+    <body>
+        <div id = "map" style = "width: 900px; height: 580px"></div>
+        <script>
+            var mapOptions = {
+                center: [<%=lat%>,<%=lon%>],
+                zoom: <%=zoom%>
+            }
+    
+            var map = new L.map('map', mapOptions);
+    
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    
+            map.addLayer(layer);
+
+            var marker = L.marker([<%=lat%>,<%=lon%>]).addTo(map);
+        </script>
+
+        <button type="button" onclick="history.back()">Go Back</button>
+    </body>
+</html>

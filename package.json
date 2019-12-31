@@ -1,0 +1,17 @@
+{
+  "name": "tutorial10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "*",
+    "exif": "^0.6.0",
+    "express": "*",
+    "formidable": "^1.2.1"
+  }
+}
