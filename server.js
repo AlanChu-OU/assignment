@@ -17,7 +17,7 @@ app.post('/result', (req,res)=>{
         console.log(JSON.stringify(fields));
         console.log(JSON.stringify(files));
         if(files.photo.size == 0){
-            res.status(500).end("No image is upload!");
+            res.status(500).end("No image is uploaded!");
             return;
         }
         if(files.photo.type){
@@ -67,6 +67,7 @@ app.post('/result', (req,res)=>{
                 });
             }catch(err){
                 console.log('Error: ' + err.message);
+                res.status(500).end("Error occur!");
                 return;
             } 
         });           
